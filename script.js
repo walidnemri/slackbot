@@ -5,9 +5,9 @@ const axios = require('axios');
 const currentTime = new Date();
 
 const MESSAGES = [
-  'Daily Stand Up dans 10 minutes!',
-  "C'est l'heure de manger!",
-  'Vous avez bien travaillé, rentrez chez vous!',
+  'Daily Stand Up dans 10 minutes 🔥',
+  "C'est l'heure de manger 🍔",
+  'Vous avez bien travaillé, rentrez chez vous 🏠',
 ];
 
 let currentMessage;
@@ -23,7 +23,7 @@ if (currentTime.getHours() === 8 && currentTime.getMinutes() === 50) {
 const sendMessage = async () => {
   try {
     axios.post(
-      'https://hooks.slack.com/services/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',
+      'https://hooks.slack.com/services/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',
       { text: currentMessage },
       { headers: { 'Content-type': 'application/json' } }
     );
