@@ -17,9 +17,9 @@ const MESSAGES = [
 //Pick message depending on current time
 let currentMessage;
 
-if (currentTime.getHours() === 8 && currentTime.getMinutes() === 50 && currentTime.getSeconds === 0) {
+if (currentTime.getHours() === 8 && currentTime.getMinutes() === 50 && currentTime.getSeconds() === 0) {
   currentMessage = MESSAGES[0];
-} else if (currentTime.getHours() === 12 && currentTime.getMinutes() === 30 && currentTime.getSeconds === 0) {
+} else if (currentTime.getHours() === 12 && currentTime.getMinutes() === 30 && currentTime.getSeconds() === 0) {
   currentMessage = MESSAGES[1];
 } else {
   currentMessage = MESSAGES[2];
