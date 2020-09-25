@@ -18,6 +18,8 @@
   "homepage": "https://github.com/walidnemri/slackbot#readme",
   "dependencies": {
     "axios": "^0.20.0",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "moment": "^2.29.0",
+    "moment-timezone": "^0.5.31"
   }
 }

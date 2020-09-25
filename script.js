@@ -1,11 +1,13 @@
 //Environement variable
 require('dotenv').config({ path: __dirname + '/.env' });
 
+
 //Import Axios
 const axios = require('axios');
+const moment = require('moment-timezone');
 
 //Get Time
-const currentTime = new Date();
+const currentTime = moment.tz("Europe/Brussels");
 
 //Messages array
 const MESSAGES = [
@@ -17,9 +19,10 @@ const MESSAGES = [
 //Pick message depending on current time
 let currentMessage;
 
-if (currentTime.getHours() === 8 && currentTime.getMinutes() === 50) {
+
+if (currentTime.hours() === 8 && currentTime.minute() === 50) {
   currentMessage = MESSAGES[0];
-} else if (currentTime.getHours() === 12 && currentTime.getMinutes() === 30) {
+} else if (currentTime.hours() === 12 && currentTime.minute() === 30) {
   currentMessage = MESSAGES[1];
 } else {
   currentMessage = MESSAGES[2];
